@@ -1,0 +1,18 @@
+namespace PartsInParcels.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class RemoveWeightProp : DbMigration
+    {
+        public override void Up()
+        {
+            DropColumn("dbo.Products", "Weight");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.Products", "Weight", c => c.Int(nullable: false));
+        }
+    }
+}

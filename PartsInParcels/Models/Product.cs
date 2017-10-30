@@ -12,6 +12,5 @@ namespace PartsInParcels.Models
         public string Grade { get; set; }
         public bool Cured { get; set; }
         public string Origin { get; set; }
-        public int Weight { get; set; }
     }
 }
