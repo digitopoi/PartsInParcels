@@ -29,5 +29,7 @@ namespace PartsInParcels.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PartsInParcels.Models.Product> Products { get; set; }
     }
 }
