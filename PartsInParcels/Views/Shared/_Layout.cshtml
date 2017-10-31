@@ -4,30 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Parts in Parcels</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
-    
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <img id="pig-icon" src="~/Content/images/pig.png" alt="pig icon" />
 
-                @Html.ActionLink("Parts in Parcels", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                    <li><a href="#">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
+    <nav class="orange darkent-2">
+        <div id="navbar" class="nav-wrapper container">
+            <a href="/Home" class="brand-logo">
+                <img id="pig-logo" src="https://i.imgur.com/jUbCSWx.png" alt="" />
+                Parts in Parcels
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                <li><a href="#">Cart<i class="material-icons right">shopping_basket</i></a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Cart<i class="material-icons right">shopping_basket</i></a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-    </div>
+    </nav>
+
     <div class="container">
         @RenderBody()
         <hr />
@@ -37,7 +38,6 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
