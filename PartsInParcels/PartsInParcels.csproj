@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201710302305167_RemoveWeightProp.Designer.cs">
       <DependentUpon>201710302305167_RemoveWeightProp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710311520371_AddDescriptionProp.cs" />
+    <Compile Include="Migrations\201710311520371_AddDescriptionProp.Designer.cs">
+      <DependentUpon>201710311520371_AddDescriptionProp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -309,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710302305167_RemoveWeightProp.resx">
       <DependentUpon>201710302305167_RemoveWeightProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710311520371_AddDescriptionProp.resx">
+      <DependentUpon>201710311520371_AddDescriptionProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
