@@ -25,6 +25,7 @@ namespace PartsInParcels
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
     }
