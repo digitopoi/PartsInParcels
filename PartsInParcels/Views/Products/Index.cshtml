@@ -4,33 +4,46 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Products:</h2>
 
-<div class="container">
-    @{ 
-        int itemCount = 0;
-    }
+    <h2>Products:</h2>
+    <div class="section">
+        @{ 
+            int itemCount = 0;
+        }
 
-    @while (itemCount < 3)
-    {
-        foreach (var item in Model)
+        @while (itemCount < 4)
         {
-            if (itemCount % 2 == 0)
+            foreach (var item in Model)
             {
-                @:<div class="row">
-            }
+                if (itemCount % 2 == 0)
+                {
+                    @:<div class="row">
+                }
 
-            <div class="col s12 m6">
-                <div class="card small">
-                    <div class="card-image">
-                        <img src="~/Content/images/prosciutto.jpg" />
-                        <span class="card-title">@Html.DisplayNameFor(model => model.Name)</span>
-                    </div>
-                    <div class="card-content">
-                        <p></p>
+                <div class="col s12 m6">
+                    <div class="card small">
+                        <div class="card-image">
+                            <img src="~/Content/images/prosciutto.jpg" />
+                            <span class="card-title">@Html.DisplayFor(modelItem => item.Name)</span>
+                        </div>
+                        <div class="card-content">
+                            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                        </div>
+                        <div class="card-action">
+                            @Html.ActionLink("Details", "Details", "Products")
+                            <!-- TODO: ADD ACTION LINK-->
+                            <a class="right" href="#">Add to Cart</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                itemCount++;
+
+                if ((itemCount % 2) == 0)
+                {
+                    @:</div>
+                }
+            }
         }
-    }
+    </div>
 </div>
