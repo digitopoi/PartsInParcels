@@ -46,6 +46,8 @@
                     @Html.ValidationMessageFor(model => model.Cured)
                     <label>
                         Uncured
+                        @*@Html.CheckBoxFor(model => model.Cured)
+                        @Html.ValidationMessageFor(model => model.Cured)*@
                         <input type="checkbox" />
                         <span class="lever"></span>
                         Cured
@@ -79,8 +81,9 @@
 
             <div class="row">
                 <div class="input-field col s6">
-                    <textarea class="materialize-text-area"></textarea>
-                    <label for="Description">Description</label>
+                    @Html.EditorFor(model => model.Description)
+                    @Html.LabelFor(model => model.Description)
+                    @Html.ValidationMessageFor(model => model.Description)
                 </div>
             </div>
 
