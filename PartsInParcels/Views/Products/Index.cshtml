@@ -5,7 +5,7 @@
 }
 
 
-    <h2>Products:</h2>
+    <h4>Products:</h4>
     <div class="section">
         @{ 
             int itemCount = 0;
@@ -30,7 +30,7 @@
                             <p>@Html.DisplayFor(modelItem => item.Description)</p>
                         </div>
                         <div class="card-action">
-                            @Html.ActionLink("Details", "Details", "Products")
+                            @Html.ActionLink("Details", "Details", new { id = item.ProductID })
                             <!-- TODO: ADD ACTION LINK-->
                             <a class="right" href="#">Add to Cart</a>
                         </div>
