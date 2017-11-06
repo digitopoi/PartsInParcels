@@ -31,12 +31,12 @@ namespace PartsInParcels.Models
             return new ApplicationDbContext();
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            Database.SetInitializer(new
-                MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
-            base.OnModelCreating(modelBuilder);
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    Database.SetInitializer(new
+        //        MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
+        //    base.OnModelCreating(modelBuilder);
+        //}
 
         public System.Data.Entity.DbSet<PartsInParcels.Models.Product> Products { get; set; }
     }
