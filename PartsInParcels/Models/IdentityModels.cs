@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using PartsInParcels.Migrations;
 
 namespace PartsInParcels.Models
 {
@@ -28,6 +29,13 @@ namespace PartsInParcels.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new
+                MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
+            base.OnModelCreating(modelBuilder);
         }
 
         public System.Data.Entity.DbSet<PartsInParcels.Models.Product> Products { get; set; }
