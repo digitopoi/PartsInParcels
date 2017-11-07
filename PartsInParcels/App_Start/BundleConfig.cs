@@ -24,8 +24,7 @@ namespace PartsInParcels
             //          "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/materialize.css",
-                      //"~/Content/bootstrap.css",
+                      "~/Content/materialize.min.css",
                       "~/Content/Site.css"));
         }
     }
